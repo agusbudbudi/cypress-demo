@@ -1,0 +1,35 @@
+import { visitUrlStg } from "../support/testStep/visitUrl";
+
+describe("Login Saucedemo.com", () => {
+  beforeEach(() => {
+    //cy.visit("https://www.saucedemo.com/");
+    //cy.visitUrl();
+    visitUrlStg();
+  });
+
+  it("Verify Default State", () => {
+    cy.get(".login_logo").should("have.text", "Swag Labs");
+
+    //Login using manual step
+    //input username
+    //cy.get('input[data-test="username"]').type('standard_user')
+    //cy.get('input[data-test="password"]').type('secret_sauce')
+
+    //Login using fixtures file to store credentials
+    /*cy.fixture("credentials.json").then((credentials) => {
+      const validUser = credentials.validUser;
+      cy.get('input[data-test="username"]').type(validUser.username);
+      cy.get('input[data-test="password"]').type(validUser.password);
+    });
+    */
+
+    //Login using Custom command
+    cy.login();
+
+    //click button
+    cy.get('input[data-test="login-button"]').click();
+
+    //assert URL
+    cy.url().should("include", "/inventory.html");
+  });
+});

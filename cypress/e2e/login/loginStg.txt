@@ -1,0 +1,18 @@
+import { visitUrlStg } from "../../support/testStep/visitUrl";
+import { login } from "../../support/testStep/login";
+
+describe("Login Saucedemo.com", () => {
+  beforeEach(() => {
+    visitUrlStg();
+  });
+
+  it("Verify Default State", () => {
+    cy.get(".login_logo").should("have.text", "Swag Labs");
+    //login using separate test step
+    login();
+    //click button
+    cy.get('input[data-test="login-button"]').click();
+    //assert URL
+    cy.url().should("include", "/inventory.html");
+  });
+});

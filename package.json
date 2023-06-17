@@ -1,0 +1,19 @@
+{
+  "name": "cypressdemo",
+  "version": "1.0.0",
+  "description": "automation test cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "testmenua": "npx cypress run --spec \"cypress/e2e/login/*\" "
+  },
+  "keywords": [
+    "automation",
+    "test"
+  ],
+  "author": "agus",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.14.0"
+  }
+}
