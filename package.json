@@ -14,7 +14,7 @@
   "author": "agus",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.17.4"
+    "cypress": "^13.13.1"
   },
   "dependencies": {
     "aggregate-error": "^3.1.0",
@@ -138,6 +138,7 @@
     "performance-now": "^2.1.0",
     "pify": "^2.3.0",
     "pretty-bytes": "^5.6.0",
+    "process": "^0.11.10",
     "proxy-from-env": "^1.0.0",
     "psl": "^1.9.0",
     "pump": "^3.0.0",
@@ -164,7 +165,7 @@
     "throttleit": "^1.0.0",
     "through": "^2.3.8",
     "tmp": "^0.2.1",
-    "tough-cookie": "^2.5.0",
+    "tough-cookie": "^4.1.4",
     "tslib": "^2.5.2",
     "tunnel-agent": "^0.6.0",
     "tweetnacl": "^0.14.5",
